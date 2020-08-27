@@ -1,0 +1,345 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;    
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(234, 237, 237);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header starts */
+/* Navigation belt starts. */
+.nav-belt {
+  display: flex;
+  background-color: rgb(19, 25, 33);
+  height: 60px;
+  align-items: center;
+}
+
+.nav-belt > .nav-belt-left {
+  margin-right: 60px;
+  margin-left: 10px;
+}
+
+.nav-belt > .search-bar {
+  flex: 3.2; 
+}
+
+.search-bar form {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar form button, .search-bar form input {
+  width: 100%;
+  height: 40px;
+  border: none;
+}
+
+.search-bar form > :nth-child(1) {
+  width: 45px;  
+  border-right: 1px groove rgb(172, 168, 168);
+  border-radius: 10px;
+}
+
+.search-bar form > :nth-child(2) {
+  flex: 1;
+  max-width: 50vw;
+}
+
+.search-bar form > :nth-child(3) {
+  width: 45px;
+}
+
+.search-bar form > :nth-child(3) button {
+  background-color: rgb(243, 175, 86);
+}
+
+.nav-belt > .nav-belt-right {
+  flex: 2;
+}
+
+.nav-belt-right ul {
+  display: flex;
+  column-gap: 15px;
+}
+
+.nav-belt-right ul > li {
+  flex: 1;
+}
+
+.nav-belt-right a {
+  color: rgb(158, 164, 172);
+  font-size: 0.80rem;
+}
+
+.nav-belt-right a strong {
+  color: white;
+  font-size: 0.90rem;
+}
+
+#usa-flag {
+  position: relative;
+  top: 12px;
+  left: 10px;
+}
+
+#shopping-car {
+  position: relative;
+  top: 10px;
+}
+/* Navigation belt ends. */
+
+/* Navigation main starts. */
+
+.nav-main {
+  display: flex;
+  column-gap: 25px;
+  align-items: center;
+  height: 39px;
+  border-style: dashed;
+  background-color: rgb(35, 47, 62);
+  margin: 0;
+}
+
+.nav-main-left {
+  margin-right: 15px;
+  margin-left: 10px;
+  width: 160px;
+}
+
+.nav-main-left span {
+  color: white;
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+.nav-main-left span strong {
+  margin-left: 20px;
+  font-size: 0.9rem;
+}
+
+.nav-main-left i {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+}
+
+.nav-main-right ul{
+  display: flex;
+  column-gap: 15px;    
+}
+
+.nav-main-right ul a {
+  color: rgb(200, 205, 212);
+  font-size: 0.9rem;
+}
+/* Navigation main ends. */
+
+/* Navigation toaster starts. */
+.nav-toaster {
+  height: 47px;
+  line-height: 47px;
+  background-color: rgb(216, 247, 235);
+}
+
+.nav-toaster p {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 0.8rem;  
+}
+
+.nav-toaster a {
+  color: rgb(0, 102, 192);  
+}
+/* Navigation toaster ends. */
+/* Header ends */
+
+/* Main starts. */
+/* Slider section starts. */
+
+.slider {
+  /* border-style: dashed; */
+  
+}
+
+.slider img {
+  /* vertical-align: top; */
+  max-width: 100%;
+  max-height: 100%;
+}
+/* Slider section ends. */
+
+/* Cards section starts */
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  /* border-style: dashed; */
+  column-gap: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: absolute;
+  top: 65vh;
+
+}
+
+.card {
+  flex: 1;
+  border-style: groove; 
+  height: 60vh; 
+  background-color: rgb(255, 255, 255);
+}
+
+.card h2 {
+  margin: 25px 0 10px 22px;
+  font-size: 1.25rem;
+}
+
+.card img {
+  width: 88%;
+  height: 65%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card a {
+  display: block;
+  margin: 25px 0 0 22px;
+  font-size: 0.85rem;
+}
+
+.card-4 a {
+  border-style: 1px solid;
+  border-color: #a88734;
+  border-radius: 5px;
+  width: 85%;
+  height: 8%;
+  line-height: 30px;
+  color: #111;
+  text-align: center;
+  background-color: rgb(242, 204, 110);
+}
+/* Cards section ends. */
+
+/* Carousels section starts. */
+
+.carousels {
+margin: 110px 20px 0 20px;
+padding-top: 5px;
+overflow: auto;
+}
+
+.carousel {
+background-color: rgb(255, 255, 255);
+padding-top: 2px;
+height: 50vh;
+margin-top: 20px;
+overflow: hidden;
+}
+
+
+.carousels h3 {
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.carousel-1 {
+  display: flex;
+  column-gap: 15px;
+  margin: 0px 30px 0 30px;
+  min-width: 100%;
+}
+
+.carousel-1 > div {
+  flex: 1;
+}
+
+.carousel-1 img {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.carousel-2 {
+  display: flex;
+  column-gap: 40px;
+  margin: 0px 30px 0 30px;
+  min-width: 100%;
+}
+
+.carousel-2 > div {
+  flex: 1;
+}
+
+.carousel-2 img {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.carousel-3 {
+  display: flex;
+  column-gap: 15px;
+  margin: 0px 30px 0 30px;
+  min-width: 100%;
+}
+
+.carousel-3 > div {
+  flex: 1;
+}
+
+.carousel-3 img {
+  width: 90%;
+  height: 60%;
+  background-color: transparent;
+}
+
+.carousel-4 {
+  display: flex;
+  column-gap: 15px;
+  margin: 0px 30px 0 30px;
+  min-width: 100%;
+}
+
+.carousel-4 > div {
+  flex: 1;
+}
+
+.carousel-4 img {
+  width: 90%;
+  height: 60%;
+  background-color: transparent;
+}
+
+.carousel-5 {
+  display: flex;
+  column-gap: 15px;
+  margin: 0px 30px 0 30px;
+  min-width: 100%;
+}
+
+.carousel-5 > div {
+  flex: 1;
+}
+
+.carousel-5 img {
+  width: 90%;
+  height: 60%;
+  background-color: transparent;
+}
+

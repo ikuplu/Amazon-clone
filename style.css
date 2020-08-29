@@ -1,13 +1,15 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;    
+  box-sizing: border-box; 
 }
 
 body {
-  font-family: sans-serif;
-  background-color: rgb(234, 237, 237);
+  font-family: 'Oxygen', sans-serif;
+  background-color: rgb(234, 237, 237); 
 }
 
 ul {
@@ -20,6 +22,13 @@ a {
 
 /* Header starts */
 /* Navigation belt starts. */
+
+header {
+  overflow: hidden;
+}
+
+
+
 .nav-belt {
   display: flex;
   background-color: rgb(19, 25, 33);
@@ -30,6 +39,13 @@ a {
 .nav-belt > .nav-belt-left {
   margin-right: 60px;
   margin-left: 10px;
+  min-width: 100px;
+  flex: 1.3;
+  white-space: nowrap;
+}
+
+.nav-belt-left img:hover {
+  border: 1px groove white;
 }
 
 .nav-belt > .search-bar {
@@ -50,12 +66,12 @@ a {
 .search-bar form > :nth-child(1) {
   width: 45px;  
   border-right: 1px groove rgb(172, 168, 168);
-  border-radius: 10px;
 }
 
 .search-bar form > :nth-child(2) {
   flex: 1;
   max-width: 50vw;
+  min-width: 40vw;
 }
 
 .search-bar form > :nth-child(3) {
@@ -64,6 +80,18 @@ a {
 
 .search-bar form > :nth-child(3) button {
   background-color: rgb(243, 175, 86);
+}
+
+#search-button-1 {
+  border-left: 1px groove grey;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#search-button-2 {
+  border-right: 1px groove grey;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .nav-belt > .nav-belt-right {
@@ -89,6 +117,10 @@ a {
   font-size: 0.90rem;
 }
 
+.nav-belt-right li:hover {
+  border: 1px groove white;
+}
+
 #usa-flag {
   position: relative;
   top: 12px;
@@ -107,8 +139,7 @@ a {
   display: flex;
   column-gap: 25px;
   align-items: center;
-  height: 39px;
-  border-style: dashed;
+  height: 44px;
   background-color: rgb(35, 47, 62);
   margin: 0;
 }
@@ -137,6 +168,10 @@ a {
   top: 10px;
 }
 
+.nav-main-left:hover {
+  border: 1px groove white;
+}
+
 .nav-main-right ul{
   display: flex;
   column-gap: 15px;    
@@ -145,6 +180,10 @@ a {
 .nav-main-right ul a {
   color: rgb(200, 205, 212);
   font-size: 0.9rem;
+}
+
+.nav-main-right li:hover {
+  border: 1px groove white;
 }
 /* Navigation main ends. */
 
@@ -164,6 +203,11 @@ a {
 .nav-toaster a {
   color: rgb(0, 102, 192);  
 }
+
+.nav-toaster a:hover {
+  color: rgb(243, 109, 85);
+  text-decoration-line: underline;
+}
 /* Navigation toaster ends. */
 /* Header ends */
 
@@ -171,14 +215,15 @@ a {
 /* Slider section starts. */
 
 .slider {
-  /* border-style: dashed; */
-  
+  display: block;
+  overflow: hidden;
 }
 
 .slider img {
-  /* vertical-align: top; */
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 500px;
+  min-width: 900px;
+  white-space: nowrap;
 }
 /* Slider section ends. */
 
@@ -186,20 +231,19 @@ a {
 
 .cards {
   display: flex;
-  justify-content: space-evenly;
-  /* border-style: dashed; */
   column-gap: 15px;
   margin-left: 20px;
   margin-right: 20px;
   position: absolute;
-  top: 65vh;
-
+  top: 60vh;
+  overflow: hidden;
 }
 
 .card {
   flex: 1;
+  vertical-align: middle;
   border-style: groove; 
-  height: 60vh; 
+  height: 65vh; 
   background-color: rgb(255, 255, 255);
 }
 
@@ -210,7 +254,7 @@ a {
 
 .card img {
   width: 88%;
-  height: 65%;
+  height: 65%; 
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -220,6 +264,7 @@ a {
   display: block;
   margin: 25px 0 0 22px;
   font-size: 0.85rem;
+  color: rgb(103, 179, 241);
 }
 
 .card-4 a {
@@ -232,7 +277,15 @@ a {
   color: #111;
   text-align: center;
   background-image: linear-gradient( to top, rgb(239, 189, 63), rgb(246, 222, 162));
+}
 
+.card-1 a:hover, .card-2 a:hover, .card-3 a:hover {
+  color: rgb(243, 109, 85);
+  text-decoration-line: underline;
+}
+
+.card-4 a:hover {
+  background-image: linear-gradient( to top, rgb(248, 189, 38), rgb(245, 212, 129));
 }
 /* Cards section ends. */
 
@@ -248,25 +301,28 @@ background-color: rgb(255, 255, 255);
 padding-top: 2px;
 height: 50vh;
 margin-top: 20px;
+overflow: hidden;
 }
 
-.carousel .fa-caret-square-left {
-  display: inline-block;
-  position: absolute;
-  left: 2%;
-  top: 155%;
-  font-size: 3rem;
-  
+.carousel img {
+  width: auto;
+  height: auto;
+  max-width: 270px;
+  max-height: 200px;
+  vertical-align: middle;
+  background-color: transparent;
 }
 
-.carousel .fa-caret-square-right {
-  display: inline-block;
-  position: absolute;
-  right: 2%;
-  top: 155%;
-  font-size: 3rem;
+.carousel h3 a {
+  text-decoration-style: none;
+  color: rgb(86, 167, 233);
+  font-size: 0.8rem;
 }
 
+.carousel h3 a:hover {
+  color: rgb(243, 109, 85);
+  text-decoration-line: underline;
+}
 
 .carousels h3 {
   margin-left: 30px;
@@ -278,12 +334,13 @@ margin-top: 20px;
   display: flex;
   column-gap: 15px;
   margin: 0px 30px 0 30px;
+  
 }
 
-.carousel-1 img {
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
+.carousel-1:hover {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  transition: ease 1s;
 }
 
 .carousel-2 {
@@ -292,10 +349,10 @@ margin-top: 20px;
   margin: 0px 30px 0 30px;
 }
 
-.carousel-2 img {
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
+.carousel-2:hover {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  transition: ease 1s;
 }
 
 .carousel-3 {
@@ -304,22 +361,23 @@ margin-top: 20px;
   margin: 0px 30px 0 30px;
 }
 
-.carousel-3 img {
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
+.carousel-3:hover {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  transition: ease 1s;
 }
 
 .carousel-4 {
   display: flex;
   column-gap: 15px;
   margin: 0px 30px 0 30px;
+  overflow-x: scroll;
 }
 
-.carousel-4 img {
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
+.carousel-4:hover {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  transition: ease 1s;
 }
 
 .carousel-5 {
@@ -328,16 +386,20 @@ margin-top: 20px;
   margin: 0px 30px 0 30px;
 }
 
-.carousel-5 img {
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
+.carousel-5:hover {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  transition: ease 1s;
 }
 
 /* Carousels section ends. */
 
 /* Footer starts. */
 /* Footer belt starts. */
+
+  footer {
+    overflow: hidden;
+  }
 
  .footer-belt-top {
   height: 55px;
@@ -362,7 +424,6 @@ margin-top: 20px;
  }
 
  .footer-belt-main a {
-
   display: inline-block;
   position: relative;
   border-color: rgb(132, 106, 41);
@@ -370,13 +431,17 @@ margin-top: 20px;
   border-style: solid;
   border-width: 1px;
   bottom: 20px;
-  width: 23%;
+  width: 280px;
   height: 27%;
   line-height: 30px;
   font-size: 0.80rem;
   background-image: linear-gradient( to top, rgb(239, 189, 63), rgb(246, 222, 162));
   margin-bottom: 30px;
   margin-top: 0;
+ }
+
+ .footer-belt-main a:hover {
+   background-image: linear-gradient( to top, rgb(248, 189, 38), rgb(245, 199, 84));
  }
 
  .footer-belt-end {
@@ -387,6 +452,10 @@ margin-top: 20px;
   text-align: center;
   color: #FFF;
   font-size: 0.85rem; 
+ }
+
+ .footer-belt .footer-belt-end {
+  scroll-behavior: smooth;
  }
  /* Footer belt ends. */
 
@@ -403,7 +472,18 @@ margin-top: 20px;
    border-bottom-style: ridge;
    border-bottom-color: rgb(255, 255, 255, 0.4);
    border-bottom-width: 0.5%;
+   min-width: 950px;
+   white-space: nowrap;
  }
+
+ .footer-main-main a {
+   color: #DDD ;
+ }
+
+ .footer-main-main a:hover {
+   text-decoration-line: underline ;
+ }
+ 
 
  .col {
   flex-basis: 12%;
@@ -427,10 +507,11 @@ margin-top: 20px;
 
 .footer-main-footer {
   height: 100px;
+  min-width: 950px;
+  white-space: nowrap;
   line-height: 80px;
   text-align: center;
-  background-color: rgb(35, 47, 62);
-  scroll-behavior: smooth;
+  background-color: rgb(35, 47, 62); 
 }
 
 .amazon-logo-footer {
@@ -465,10 +546,11 @@ margin-top: 20px;
 }
 
 #usa-flag-2 {
-  /* position: relative;
-  left: -25px;
-  top: 2px; */
   margin-right: 3px;
+}
+
+.footer-main-footer a:hover {
+  cursor: pointer;
 }
 
 /* Footer main ends. */
@@ -497,8 +579,118 @@ margin-top: 20px;
 /* Footer ends. */
 
 
-/* ***Responsiveness for mobile phones.*** */
-@media
+/* ***Responsiveness for tablets.*** */
+
+@media (max-width: 1150px) and (min-width: 650px) {
+    
+  .card {
+    flex: 1 0 32.5%;  
+  }
+
+  .card-4 {
+    display: none;
+  }
+
+  .card h2 {
+    margin: 20px  5px 30px;
+    font-size: 1rem;
+  }
+  
+  .footer-main-main {
+    justify-content: left;
+    min-width: 600px;
+    column-gap: 20px;
+  }
+
+  .footer-main-footer a {
+    font-size: 10px;
+  }
+}
+
+/* Responsiveness for mobile. */
+  @media (max-width: 650px) {
+    .nav-belt > .nav-belt-left {
+      margin-right: 10px;
+    }
+    
+    .nav-main {
+      column-gap: 5px;
+      flex-flow: column;
+      height: 50px;
+      line-height: 35px;
+    }
+
+    .nav-main-right {
+      background-color: rgb(35, 47, 62);
+    }
+    
+    .nav-main-right ul a{
+      font-size: 10px;
+      column-gap: 10px;
+    }
+
+    .nav-main-left {
+      display: none;
+    }
+    
+    .slider {
+      display: none;
+    }
+
+    .nav-toaster {
+      display: none;
+    }
+    
+    .cards {
+      /* display: none; */
+      position: relative;
+      top: 15px;
+      width: 90%;
+      flex-flow: column;
+    }
+    
+    .card {
+      flex-basis: 100%;
+      margin-bottom: 15px;
+    }
+
+    .card-4 {
+      display: none;
+    }
+
+    .carousel {
+      line-height: 50px;
+    }
+
+    .carousel img {
+      width: 90px;
+      height: 100px;
+    }
+      
+    .search-bar {
+      display: none;
+    }
+
+    .nav-belt-left {
+      display: none;
+   }
+
+   .footer-belt {
+     display: none;
+   }
+
+   .footer-main {
+    display: none;
+   }
+
+   .footer-footer {
+     height: 100px;
+     line-height: 30px;
+   }
+  }
+    
+  
+
 
 
   

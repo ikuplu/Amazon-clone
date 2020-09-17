@@ -47,7 +47,7 @@ header {
 }
 
 .nav-belt > .search-bar {
-  flex: 3.2;
+  flex: 3.5;
 }
 
 .search-bar form {
@@ -69,8 +69,6 @@ header {
 
 .search-bar form > :nth-child(2) {
   flex: 1;
-  max-width: 50vw;
-  min-width: 40vw;
 }
 
 .search-bar form > :nth-child(3) {
@@ -81,14 +79,12 @@ header {
   background-color: rgb(243, 175, 86);
 }
 
-#search-button-1 {
-  /* border-left: 1px groove grey; */
+#search-categories {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-#search-button-2 {
-  /* border-right: 1px groove grey; */
+#search-submit-button {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -232,35 +228,21 @@ header {
 .cards {
   display: flex;
   column-gap: 15px;
-  /* vertical-align: baseline; */
-  /* justify-content: end; */
-  
-  /* margin-left: 20px;
-  margin-right: 20px; */
   overflow: hidden;
-  /* z-index: 2; */
   background-image: url(images/hero-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   height: 600px;
   width: 100%;
-  border-style: dotted;
-  min-width: 1000px;
 }
 
 .card {
   flex: 1;
-  /* width: 20%; */
-  /* vertical-align: ; */
   border-style: groove;
   height: 60vh;
   background-color: rgb(255, 255, 255);
-  /* position: relative; */
-  /* top: 230px; */
   align-self: flex-end;
-  
-
 }
 
 .card-1 {
@@ -293,12 +275,10 @@ header {
 }
 
 .card-4 a {
-  border-style: 1px solid;
-  border-color: #a88734;
   border-radius: 5px;
   width: 85%;
-  height: 8%;
-  line-height: 30px;
+  height: 10%;
+  line-height: 35px;
   color: #111;
   text-align: center;
   background-image: linear-gradient(
@@ -460,11 +440,8 @@ footer {
 .footer-belt-main a {
   display: inline-block;
   position: relative;
-  border-color: rgb(132, 106, 41);
-  border-radius: 3px;
-  border-style: solid;
-  border-width: 1px;
   bottom: 20px;
+  border-radius: 3px;
   width: 280px;
   height: 27%;
   line-height: 30px;
@@ -636,7 +613,6 @@ footer {
   }
 
   .footer-main-main {
-    /* justify-content: left; */
     min-width: 600px;
     column-gap: 30px;
   }
@@ -648,11 +624,10 @@ footer {
 
 /* Responsiveness for mobile. */
 @media (max-width: 650px) {
-  
   body {
     min-width: auto;
   }
-  
+
   .nav-belt > .nav-belt-left {
     margin-right: 10px;
   }
@@ -686,10 +661,6 @@ footer {
   }
 
   .cards {
-    /* display: none; */
-    /* position: relative; */
-    /* top: 15px; */
-    /* width: 100%; */
     flex-flow: column;
     background-image: none;
     overflow: auto;
@@ -698,7 +669,6 @@ footer {
   }
 
   .card {
-    /* flex-basis: 100%; */
     width: 100%;
     height: auto;
     margin-bottom: 15px;

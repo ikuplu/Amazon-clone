@@ -80,12 +80,12 @@ header {
   background-color: rgb(243, 175, 86);
 }
 
-#search-categories {
+.searchbar-categories {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-#search-submit-button {
+.submit-button {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -117,13 +117,13 @@ header {
   border: 1px groove white;
 }
 
-#usa-flag {
+.usa-flag {
   position: relative;
   top: 12px;
   left: 10px;
 }
 
-#shopping-car {
+.shopping-car {
   position: relative;
   top: 10px;
 }
@@ -587,7 +587,7 @@ footer {
     margin-left: auto;
   }
 
-  #usa-flag {
+  .usa-flag {
     left: 30px;
   }
 

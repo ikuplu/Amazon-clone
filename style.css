@@ -9,6 +9,7 @@
 body {
   font-family: 'Oxygen', sans-serif;
   background-color: rgb(234, 237, 237);
+  min-width: 1000px;
 }
 
 ul {
@@ -81,13 +82,13 @@ header {
 }
 
 #search-button-1 {
-  border-left: 1px groove grey;
+  /* border-left: 1px groove grey; */
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
 #search-button-2 {
-  border-right: 1px groove grey;
+  /* border-right: 1px groove grey; */
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -231,27 +232,35 @@ header {
 .cards {
   display: flex;
   column-gap: 15px;
+  /* vertical-align: baseline; */
+  /* justify-content: end; */
+  
   /* margin-left: 20px;
   margin-right: 20px; */
   overflow: hidden;
   /* z-index: 2; */
   background-image: url(images/hero-1.jpg);
-  background-size: 110%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  height: 110vh;
+  height: 600px;
   width: 100%;
+  border-style: dotted;
+  min-width: 1000px;
 }
 
 .card {
   flex: 1;
   /* width: 20%; */
-  vertical-align: middle;
+  /* vertical-align: ; */
   border-style: groove;
-  height: 65vh;
+  height: 60vh;
   background-color: rgb(255, 255, 255);
-  position: relative;
-  top: 230px;
+  /* position: relative; */
+  /* top: 230px; */
+  align-self: flex-end;
+  
+
 }
 
 .card-1 {
@@ -265,6 +274,7 @@ header {
 .card h2 {
   margin: 25px 0 10px 22px;
   font-size: 1.25rem;
+  font-weight: bolder;
 }
 
 .card img {
@@ -612,7 +622,6 @@ footer {
 /* ***Responsiveness for tablets.*** */
 
 @media (max-width: 1150px) and (min-width: 650px) {
-  
   .card {
     flex: 1 0 32.5%;
   }
@@ -623,13 +632,13 @@ footer {
 
   .card h2 {
     margin: 20px 5px 30px;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .footer-main-main {
-    justify-content: left;
+    /* justify-content: left; */
     min-width: 600px;
-    column-gap: 20px;
+    column-gap: 30px;
   }
 
   .footer-main-footer a {
@@ -639,6 +648,11 @@ footer {
 
 /* Responsiveness for mobile. */
 @media (max-width: 650px) {
+  
+  body {
+    min-width: auto;
+  }
+  
   .nav-belt > .nav-belt-left {
     margin-right: 10px;
   }
@@ -680,6 +694,7 @@ footer {
     background-image: none;
     overflow: auto;
     height: auto;
+    min-width: auto;
   }
 
   .card {

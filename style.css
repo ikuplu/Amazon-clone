@@ -22,11 +22,12 @@ a {
 }
 
 /* Header starts */
-/* Navigation belt starts. */
 
 header {
   overflow: hidden;
 }
+
+/* Navigation belt starts. */
 
 .nav-belt {
   display: flex;
@@ -36,7 +37,7 @@ header {
 }
 
 .nav-belt > .nav-belt-left {
-  margin-right: 6rem;
+  margin-right: 3rem;
   margin-left: 1rem;
   min-width: 100px;
   flex: 1.3;
@@ -45,6 +46,7 @@ header {
 
 .nav-belt-left img:hover {
   border: 1px groove white;
+  margin: -1px; /* To prevent the movement of the elements due to the border. */
 }
 
 .nav-belt > .search-bar {
@@ -91,7 +93,7 @@ header {
 }
 
 .nav-belt > .nav-belt-right {
-  flex: 2;
+  flex: 2.3;
 }
 
 .nav-belt-right ul {
@@ -115,6 +117,7 @@ header {
 
 .nav-belt-right li:hover {
   border: 1px groove white;
+  margin: -1px; /* To prevent the movement of the elements due to the border. */
 }
 
 .usa-flag {
@@ -125,7 +128,7 @@ header {
 
 .shopping-car {
   position: relative;
-  top: 10px;
+  top: 5px;
 }
 /* Navigation belt ends. */
 
@@ -180,6 +183,7 @@ header {
 
 .nav-main-right li:hover {
   border: 1px groove white;
+  margin: -1px; /* To prevent the movement of the elements due to the border. */
 }
 /* Navigation main ends. */
 
@@ -581,6 +585,21 @@ footer {
     padding-right: 0;
   }
 
+  .nav-belt-left {
+    display: none;
+  }
+
+  .search-bar {
+    transform: translateY(60px);
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .search-bar form > :nth-child(2) {
+    width: 95%;
+  }
+
   .nav-belt-right {
     transform: translateY(-40px);
     margin-right: auto;
@@ -602,9 +621,13 @@ footer {
     background-color: rgb(35, 47, 62);
   }
 
+  .nav-main-right ul {
+    column-gap: 0.7em;
+    padding-bottom: 0.5rem;
+  }
+
   .nav-main-right ul a {
-    font-size: 0.85rem;
-    column-gap: 0.6rem;
+    font-size: 0.7rem;
   }
 
   .nav-main-left {
@@ -651,21 +674,6 @@ footer {
     width: 300px;
     height: auto;
     margin-left: 1.8rem;
-  }
-
-  .search-bar {
-    transform: translateY(60px);
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .search-bar form > :nth-child(2) {
-    width: 95%;
-  }
-
-  .nav-belt-left {
-    display: none;
   }
 
   .footer-belt {
